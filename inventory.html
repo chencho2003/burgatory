@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="inventory.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+        <!-- Montserrat Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+
+    <section class="header">
+      <div class="logo">
+        <i class="ri-menu-line icon icon-0 menu"></i>
+        <h2>BURGATORY</h2>
+      </div>
+
+      <div class="search--notification--profile">
+
+        <div class="search">
+          <input type="text" placeholder="Search.." />
+          <button><i class="ri-search-2-line"></i></button>
+        </div>
+
+        <div class="notification--profile">
+
+          <div class="profile" onclick="menuToggle();">
+            <img src="profile.jpg" alt="">
+          </div>
+
+          <div class="menuu">
+            <h4>Chencho Wangdi
+              <div>
+                Management Team
+              </div>
+            </h4>
+            <ul>
+              <li>
+                <ion-icon name="person"></ion-icon>
+                <a href="profilee.html">My Profile</a>
+              </li>
+              <li>
+                <ion-icon name="log-in"></ion-icon>
+                <a href="login.html">Log In</a>
+              </li>
+              <li>
+                <ion-icon name="log-out"></ion-icon>
+                <a href="index.html">Log Out</a>
+              </li>
+              <li>
+                <ion-icon name="key"></ion-icon>
+                <a href="password.html">Change Password</a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+    <section class="main">
+      <div class="sidebar">
+        <ul class="sidebar--items">
+          <li>
+            <a href="home.html" id="active--link">
+              <ion-icon style="font-size: 2rem;" name="apps"></ion-icon> 
+              <span class="sidebar--item">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="inventory.html">
+              <ion-icon style="font-size: 2rem;" name="laptop"></ion-icon>
+              <span class="sidebar--item">Inventory and Property
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="taskk.html">
+              <ion-icon style="font-size: 2rem;" name="checkbox-outline"></ion-icon>
+              <span class="sidebar--item">Staff Task and tour</span>
+            </a>
+          </li>
+          <li>
+            <a href="leaveapplication.html">
+              <ion-icon style="font-size: 2rem;" name="mail-open"></ion-icon>
+              <span class="sidebar--item">Leave application form</span>
+            </a>
+          </li>
+          <li>
+            <a href="promotion.html">
+              <ion-icon style="font-size: 2rem;" name="school"></ion-icon>
+              <span class="sidebar--item"> Promotion and Resignation</span>
+            </a>
+          </li>
+          <li>
+            <a href="hrh.html">
+              <ion-icon style="font-size: 2rem;" name="help-circle-outline"></ion-icon>
+              <span class="sidebar--item">Human Resource and Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="a.html">
+              <ion-icon style="font-size: 2rem;" name="calendar"></ion-icon>
+              <span class="sidebar--item">Notification and Company Calendar</span>
+            </a>
+          </li>
+          <li>
+            <a href="rule.html">
+
+              <ion-icon style="font-size: 2rem;"  name="clipboard"></ion-icon>
+              <span class="sidebar--item"> Rules and Regulations
+              </span>
+            </a>
+          </li>
+        </ul>
+    </div>
+    <div class="main--content">
+
+            <!-- Main -->
+            <main class="main-container">
+              <div class="main-title">
+                <p class="font-weight-bold">Inventory and Property</p>
+              </div>
+      
+              <div class="main-cards">
+      
+                <div class="card">
+                  <div class="card-inner">
+                    <p class="text-primary">PRODUCTS</p>
+                    <span class="material-icons-outlined text-orange">inventory_2</span>
+                  </div>
+                  <span class="text-primary font-weight-bold">249</span>
+                </div>
+      
+                <div class="card">
+                  <div class="card-inner">
+                    <p class="text-primary">PURCHASE ORDERS</p>
+                    <span class="material-icons-outlined text-orange">add_shopping_cart</span>
+                  </div>
+                  <span class="text-primary font-weight-bold">808</span>
+                </div>
+      
+                <div class="card">
+                  <div class="card-inner">
+                    <p class="text-primary">SALES ORDERS</p>
+                    <span class="material-icons-outlined text-orange">shopping_cart</span>
+                  </div>
+                  <span class="text-primary font-weight-bold">10,500</span>
+                </div>
+      
+                <div class="card">
+                  <div class="card-inner">
+                    <p class="text-primary">INVENTORY ALERTS</p>
+                    <span class="material-icons-outlined text-orange">notification_important</span>
+                  </div>
+                  <span class="text-primary font-weight-bold">56</span>
+                </div>
+      
+              </div>
+      
+              <div class="charts">
+      
+                <div class="charts-card">
+                  <p class="chart-title">Top 6 Products</p>
+                  <div id="bar-chart"></div>
+                </div>
+
+              </div>
+            </main>
+            <!-- End Main -->
+    
+            <div class="table_responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Sl</th>
+                    <th>Image</th>
+                    <th>Product Name</th>
+                    <th>Product Type</th>
+                    <th>Order Date</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>01</td>
+                    <td><img src="wooper.jpg" alt=""></td>
+                    <td>Whopper</td>
+                    <td>2022-10-01</td>
+                    <td>Burger</td>
+                    <td>20</td>
+                    <td>Nu.200</td>
+                    <td>Nu.4000</td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td><img src="premiumb.jpg" alt=""></td>
+                    <td>Premium burgers</td>
+                    <td>2022-10-01</td>
+                    <td>Burger</td>
+                    <td>10</td>
+                    <td>Nu.250</td>
+                    <td>Nu.2500</td>
+                  </tr>
+                  <tr>
+                    <td>03</td>
+                    <td><img src="sliders.jpg" alt=""></td>
+                    <td>Sliders</td>
+                    <td>2022-10-01</td>
+                    <td>Burger</td>
+                    <td>18</td>
+                    <td>Nu.300</td>
+                    <td>Nu.5400</td>
+                  </tr>
+                  <tr>
+                      <td>04</td>
+                      <td><img src="bkstack.JPG" alt=""></td>
+                      <td>BK Stackers</td>
+                      <td>2022-10-01</td>
+                      <td>Burger</td>
+                      <td>30</td>
+                      <td>Nu.200</td>
+                      <td>Nu.6000</td>  
+                  </tr>
+                  <tr>
+                      <td>05</td>
+                      <td><img src="bigk.jpg" alt=""></td>
+                      <td>Big King</td>
+                      <td>2022-10-01</td>
+                      <td>Burger</td>
+                      <td>18</td>
+                      <td>Nu.300</td>
+                      <td>Nu.5400</td>
+                    </tr>
+                    <tr>
+                      <td>06</td>
+                      <td><img src="sandwich.JPG" alt=""></td>
+                      <td>Sandwiches</td>
+                      <td>2022-10-01</td>
+                      <td>Poultry and fish</td>
+                      <td>40</td>
+                      <td>Nu.150</td>
+                      <td>Nu.6000</td>  
+                  </tr>
+                  <tr>
+                      <td>07</td>
+                      <td><img src="chickens.JPG""></td>
+                      <td>Chicken Sandwiches</td>
+                      <td>2022-10-01</td>
+                      <td>Poultry and fish</td>
+                      <td>10</td>
+                      <td>Nu.200</td>
+                      <td>Nu.2000</td>  
+                  </tr>
+                  <tr>
+                      <td>08</td>
+                      <td><img src="chickenf.jpg" alt=""></td>
+                      <td>Chicken Fries</td>
+                      <td>2022-10-01</td>
+                      <td>Poultry and fish</td>
+                      <td>50</td>
+                      <td>Nu.200</td>
+                      <td>Nu.10000</td>  
+                  </tr>
+                  <tr>
+                      <td>09</td>
+                      <td><img src="chicekentend.jpeg" alt=""></td>
+                      <td>Chichen Tenders</td>
+                      <td>2022-10-01</td>
+                      <td>Poultry and fish</td>
+                      <td>30</td>
+                      <td>Nu.200</td>
+                      <td>Nu.6000</td>  
+                  </tr>
+                  <tr>
+                      <td>10</td>
+                      <td><img src="beanbur.jpg" alt=""></td>
+                      <td>Bean Burger</td>
+                      <td>2022-10-01</td>
+                      <td>Vegetarian</td>
+                      <td>60</td>
+                      <td>Nu.200</td>
+                      <td>Nu.12000</td>  
+                  </tr>
+                  <tr>
+                      <td>11</td>
+                      <td><img src="bkv.jpg" alt=""></td>
+                      <td>BK Veggie</td>
+                      <td>2022-10-01</td>
+                      <td>Vegetarian</td>
+                      <td>50</td>
+                      <td>Nu.250</td>
+                      <td>Nu.12500</td>  
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+      
+    </div>
+    </section>
+    
+    <!-- the toggle -->
+    <script>
+      let menu = document.querySelector(".menu");
+      let sidebar = document.querySelector(".sidebar");
+      let mainContent = document.querySelector(".main--content");
+
+      menu.onclick = function () {
+        sidebar.classList.toggle("active");
+        mainContent.classList.toggle("active");
+      };
+    </script>
+    <script>
+      function menuToggle(){
+        const toggleMenu = document.querySelector('.menuu');
+        toggleMenu.classList.toggle('active')
+      }
+    </script>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+        <!-- Custom JS -->
+        <script src="inventory.js"></script>    
+  </body>
+</html>

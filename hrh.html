@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="leave.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <section class="header">
+      <div class="logo">
+        <i class="ri-menu-line icon icon-0 menu"></i>
+        <!-- <img class="img1" src="aaa.jpeg" alt=""> -->
+        <h2>BURGATORY</h2>
+      </div>
+
+      <div class="search--notification--profile">
+        <div class="search">
+          <input type="text" placeholder="Search.." />
+          <button><i class="ri-search-2-line"></i></button>
+        </div>
+
+        <div class="notification--profile">
+          <div class="profile" onclick="menuToggle();">
+            <img src="profile.jpg" alt="" />
+          </div>
+
+          <div class="menuu">
+            <h4>Chencho Wangdi
+              <div>
+                Management Team
+              </div>
+            </h4>
+            <ul>
+              <li>
+                <ion-icon name="person"></ion-icon>
+                <a href="profilee.html">My Profile</a>
+              </li>
+              <li>
+                <ion-icon name="log-in"></ion-icon>
+                <a href="https://ionic.io/ionicons/v4">Log In</a>
+              </li>
+              <li>
+                <ion-icon name="log-out"></ion-icon>
+                <a href="index.html">Log Out</a>
+              </li>
+              <li>
+                <ion-icon name="key"></ion-icon>
+                <a href="password.html">Change Password</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="grid-container">
+    <section class="main">
+      <div class="sidebar">
+        <ul class="sidebar--items">
+          <li>
+            <a href="home.html" >
+              <ion-icon style="font-size: 2rem" name="apps"></ion-icon>
+              <span class="sidebar--item">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="inventory.html">
+              <ion-icon style="font-size: 2rem" name="laptop"></ion-icon>
+              <span class="sidebar--item">Inventory and Property </span>
+            </a>
+          </li>
+          <li>
+            <a href="taskk.html">
+              <ion-icon
+                style="font-size: 2rem"
+                name="checkbox-outline"
+              ></ion-icon>
+              <span class="sidebar--item">Staff Task and tour</span>
+            </a>
+          </li>
+          <li>
+            <a href="leaveapplication.html">
+              <ion-icon style="font-size: 2rem" name="mail-open"></ion-icon>
+              <span class="sidebar--item">Leave application form</span>
+            </a>
+          </li>
+          <li>
+            <a href="promotion.html">
+              <ion-icon style="font-size: 2rem" name="school"></ion-icon>
+              <span class="sidebar--item"> Promotion and Resignation</span>
+            </a>
+          </li>
+          <li>
+            <a href="hrh.html"  id="active--link">
+              <ion-icon
+                style="font-size: 2rem"
+                name="help-circle-outline"
+              ></ion-icon>
+              <span class="sidebar--item">Human Resource and Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="a.html">
+              <ion-icon style="font-size: 2rem" name="calendar"></ion-icon>
+              <span class="sidebar--item"
+                >Notification and Company Calendar</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="rule.html">
+              <ion-icon style="font-size: 2rem" name="clipboard"></ion-icon>
+              <span class="sidebar--item"> Rules and Regulations </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="testbox">
+        <form action="">
+          <div class="banner">
+            <h1>Human Resource and Enquiry Form</h1>
+          </div>
+          <div class="item">
+            <p>Employee ID:</p>
+              <input type="text" name="name" placeholder="Employee ID"/>
+          </div>
+          <div class="item">
+            <p>Employee Name:</p>
+              <input type="text" name="name" placeholder="Employee Name"/>
+          </div>
+          <div class="item">
+            <p>Email:</p>
+              <input type="email" name="email" placeholder="Email Address"/>
+          </div>
+          <div class="item">
+            <p>Phone</p>
+            <input class="Phone"type="text" name="name" placeholder="17xxxxxx / 77xxxxxx">
+          </div>
+
+          <div class="item" id="reasonbox">
+            <p>Reason:</p>
+              <input type="text" name="name" placeholder="Message"/>
+          </div>
+          <div class="btn-block">
+            <button class="btn1" type="submit" href="/">Send</button>
+          </div>
+        </form>
+    </section>
+  </body>
+    <!-- the toggle -->
+    <script>
+      let menu = document.querySelector(".menu");
+      let sidebar = document.querySelector(".sidebar");
+      let mainContent = document.querySelector(".main--content");
+
+      menu.onclick = function () {
+        sidebar.classList.toggle("active");
+        mainContent.classList.toggle("active");
+      };
+    </script>
+
+</html>

@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*nav maenu on the left as a unordered list*/
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+/*nav maenu on the right as a unordered list*/
+nav {
+  flex: auto;
+  text-align: center;
+}
+/*nav maenu on the right as a list but without bullet*/
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+}
+/*nav maenu on the right as a vertically list with 50px gapping with each with underline*/
+nav ul li {
+  display: inline-block;
+  margin-right: 50px;
+}
+/*nav maenu on the right as a vertically list with 50px gapping with each without underline*/
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+p {
+  color: rgb(78, 78, 78);
+}
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.paragraph {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around; /*this*/
+}
+.menubtn {
+  width: 1cm;
+}
+.content {
+  flex-basis: 50%; /*learn this one*/
+  min-width: 300px;
+}
+.content img {
+  max-width: 100%;
+  padding: 50px 0;
+}
+
+.content h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: #ffaf76;
+  color: #fff;
+  padding: 8px 30px;
+  margin: 30px 0px;
+  border-radius: 30px;
+  transition: background 0.5s;
+}
+.btn:hover {
+  background: #ececec;
+  color: #000;
+}
+.hover-img:hover img {
+  width: 200%;
+  height: 200%;
+}
+.header {
+  background: radial-gradient(rgb(197, 197, 197), #f7f7f7);
+}
+.header .paragraph {
+  margin-top: 70px;
+}
+
+.categories {
+  margin: 70px 0;
+}
+.catg-img {
+  flex-basis: 30%;
+  min-width: 250px;
+  margin-bottom: 30px;
+}
+
+.catg-img img {
+  width: 100%;
+}
+
+.small-container {
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/*-----------------------Footer -----------------------*/
+.footer {
+  background: #000; /*black;*/
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+
+.footer h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer-content {
+  text-align: center;
+}
+.footer-content img {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.app-logo {
+  margin-top: 20px;
+}
+.app-logo img {
+  width: 140px;
+}
+.copyright {
+  text-align: center;
+}
+
+/*-----------------------media query for menu -----------------------*/
+@media only screen and (max-width: 800px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #333;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  nav ul li a {
+    color: #fff;
+  }
+}
+
+/*-----------------------media query for less than 600 screen size(mobile device) -----------------------*/
+@media only screen and (max-width: 600px) {
+  .paragraph {
+    text-align: center;
+  }
+  .content .catg-img {
+    flex-basis: 100%;
+  }
+  .paragraph {
+    text-align: left;
+  }
+  .content {
+    padding: 20px 0;
+  }
+  h1 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  p {
+    display: none;
+  }
+}
+
+/*------------------------------ account-page ------------------------------*/
+.account-page {
+  padding: 50px 0;
+  background: radial-gradient(rgb(197, 197, 197), #f7f7f7);
+}
+.form-container {
+  background: #fff;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  margin: auto;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.form-btn {
+  display: inline-block;
+}
+.form-container form {
+  max-width: 300px;
+  padding: 0 20px;
+  position: absolute;
+  top: 130px;
+  transition: transform 1s;
+}
+
+form input {
+  width: 100%;
+  height: 35px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form .btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+@media only screen and (min-width: 800px) {
+  .menubtn {
+    visibility: hidden;
+  }
+}

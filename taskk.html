@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="taskk.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+
+    <section class="header">
+
+      <div class="logo">
+        <i class="ri-menu-line icon icon-0 menu"></i>
+        <h2>BURGATORY</h2>
+      </div>
+
+      <div class="search--notification--profile">
+
+        <div class="search">
+          <input type="text" placeholder="Search.." />
+          <button><i class="ri-search-2-line"></i></button>
+        </div>
+
+        <div class="notification--profile">
+
+          <div class="profile" onclick="menuToggle();">
+            <img src="profile.jpg" alt="">
+          </div>
+
+          <div class="menuu">
+            <h4>Chencho Wangdi
+              <div>
+                Management Team
+              </div>
+            </h4>
+            <ul>
+              <li>
+                <ion-icon name="person"></ion-icon>
+                <a href="profilee.html">My Profile</a>
+              </li>
+              <li>
+                <ion-icon name="log-in"></ion-icon>
+                <a href="login.html">Log In</a>
+              </li>
+              <li>
+                <ion-icon name="log-out"></ion-icon>
+                <a href="index.html">Log Out</a>
+              </li>
+              <li>
+                <ion-icon name="key"></ion-icon>
+                <a href="password.htmls">Change Password</a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+    <section class="main">
+      <div class="sidebar">
+        <ul class="sidebar--items">
+          <li>
+            <a href="home.html" id="active--link">
+              <ion-icon style="font-size: 2rem;" name="apps"></ion-icon> 
+              <span class="sidebar--item">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="inventory.html">
+              <ion-icon style="font-size: 2rem;" name="laptop"></ion-icon>
+              <span class="sidebar--item">Inventory and Property
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="taskk.html">
+              <ion-icon style="font-size: 2rem;" name="checkbox-outline"></ion-icon>
+              <span class="sidebar--item">Staff Task and tour</span>
+            </a>
+          </li>
+          <li>
+            <a href="leaveapplication.html">
+              <ion-icon style="font-size: 2rem;" name="mail-open"></ion-icon>
+              <span class="sidebar--item">Leave application form</span>
+            </a>
+          </li>
+          <li>
+            <a href="promotion.html">
+              <ion-icon style="font-size: 2rem;" name="school"></ion-icon>
+              <span class="sidebar--item"> Promotion and Resignation</span>
+            </a>
+          </li>
+          <li>
+            <a href="hrh.html">
+              <ion-icon style="font-size: 2rem;" name="help-circle-outline"></ion-icon>
+              <span class="sidebar--item">Human Resource and Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="a.html">
+              <ion-icon style="font-size: 2rem;" name="calendar"></ion-icon>
+              <span class="sidebar--item">Notification and Company Calendar</span>
+            </a>
+          </li>
+          <li>
+            <a href="rule.html">
+
+              <ion-icon style="font-size: 2rem;"  name="clipboard"></ion-icon>
+              <span class="sidebar--item"> Rules and Regulations
+              </span>
+            </a>
+          </li>
+        </ul>
+    </div>
+    <div class="main--content">
+        <div class="task-manager">
+
+            <!-- page content starts -->
+            <div class="page-content">
+              <div class="head">Today Tasks</div>
+              <!-- tasks wrapper starts -->
+              <div class="tasks-wrapper">
+                <div class="task">
+                  <input class="task-item" name="task" type="checkbox" id="item-1" checked />
+                  <label for="item-1">
+                    <span class="label-text">Resolve complaints and requests</span>
+                  </label>
+                  <span class="tag approved">Approved</span>
+                </div>
+                <div class="task">
+                  <input class="task-item" name="task" type="checkbox" id="item-2" checked />
+                  <label for="item-2">
+                    <span class="label-text">Review sales</span>
+                  </label>
+                  <span class="tag approved">Approved</span>
+                </div>
+                <div class="task">
+                  <input class="task-item" name="task" type="checkbox" id="item-3" />
+                  <label for="item-3">
+                    <span class="label-text">Recruit new employees</span>
+                  </label>
+                  <span class="tag approved">Approved</span>
+                </div>
+                <div class="task">
+                  <input class="task-item" name="task" type="checkbox" id="item-4" />
+                  <label for="item-4">
+                    <span class="label-text">Assist the General Manager</span>
+                  </label>
+                  <span class="tag progress">In Progress</span>
+                </div>
+                <div class="task">
+                  <input class="task-item" name="task" type="checkbox" id="item-5" />
+                  <label for="item-5">
+                    <span class="label-text">Train new employees</span>
+                  </label>
+                  <span class="tag progress">In Progress</span>
+                </div>
+      
+                <div class="head upcoming">Upcoming Tasks</div>
+                <div class="task">
+                  <input class="task-item" name="task" type="checkbox" id="item-7" />
+                  <label for="item-7">
+                    <span class="label-text">Track operating costs, budgets and resources</span>
+                  </label>
+                  <span class="tag waiting">Waiting</span>
+                </div>
+                <div class="task">
+                  <input class="task-item" name="task" type="checkbox" id="item-8" />
+                  <label for="item-8">
+                    <span class="label-text">Creating this months report</span>
+                  </label>
+                  <span class="tag waiting">Waiting</span>
+                </div>
+                <div class="task">
+                  <input class="task-item" name="task" type="checkbox" id="item-9" />
+                  <label for="item-9">
+                    <span class="label-text">Monitoring customer and client satisfaction</span>
+                  </label>
+                  <span class="tag waiting">Waiting</span>
+                </div>
+                <div class="task">
+                  <input class="task-item" name="task" type="checkbox" id="item-10" />
+                  <label for="item-10">
+                    <span class="label-text">Organize schedule</span>
+                  </label>
+                  <span class="tag waiting">Waiting</span>
+                </div>
+              </div>
+              <!-- tasks wrapper ends -->
+            </div>
+            <!--  -->
+            <!-- page content ends -->
+      
+            <!-- right bar starts -->
+            <!-- <div class="right-bar">
+              <div class="head">Schedule</div>
+              <div class="right-content">
+                <div class="task-box yellow">
+                  <div class="description-task">
+                    <div class="time">08:00 - 09:00 AM</div>
+                    <div class="task-name">Product Review</div>
+                  </div>
+                  <div class="more-button"></div>
+                </div>
+                <div class="task-box red">
+                  <div class="description-task">
+                    <div class="time">01:00 - 02:00 PM</div>
+                    <div class="task-name">Team Meeting</div>
+                  </div>
+                  <div class="more-button"></div>
+                </div>
+                <div class="task-box green">
+                  <div class="description-task">
+                    <div class="time">03:00 - 04:00 PM</div>
+                    <div class="task-name">Release Event</div>
+                  </div>
+                  <div class="more-button"></div>
+                </div>
+      
+                </div>
+              </div>
+            </div> -->
+            <!-- right bar ends -->
+          </div>
+      
+    </div>
+    </section>
+    
+    <!-- the toggle -->
+    <script>
+      let menu = document.querySelector(".menu");
+      let sidebar = document.querySelector(".sidebar");
+      let mainContent = document.querySelector(".main--content");
+
+      menu.onclick = function () {
+        sidebar.classList.toggle("active");
+        mainContent.classList.toggle("active");
+      };
+    </script>
+    <script>
+      function menuToggle(){
+        const toggleMenu = document.querySelector('.menuu');
+        toggleMenu.classList.toggle('active')
+      }
+    </script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="rule.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <section class="header">
+      <div class="logo">
+        <i class="ri-menu-line icon icon-0 menu"></i>
+        <!-- <img class="img1" src="aaa.jpeg" alt=""> -->
+        <h2>BURGATORY</h2>
+      </div>
+
+      <div class="search--notification--profile">
+        <div class="search">
+          <input type="text" placeholder="Search.." />
+          <button><i class="ri-search-2-line"></i></button>
+        </div>
+
+        <div class="notification--profile">
+          <div class="profile" onclick="menuToggle();">
+            <img src="profile.jpg" alt="" />
+          </div>
+
+          <div class="menuu">
+            <h4>Chencho Wangdi
+              <div>
+                Management Team
+              </div>
+            </h4>
+            <ul>
+              <li>
+                <ion-icon name="person"></ion-icon>
+                <a href="profilee.html">My Profile</a>
+              </li>
+              <li>
+                <ion-icon name="log-in"></ion-icon>
+                <a href="login.html">Log In</a>
+              </li>
+              <li>
+                <ion-icon name="log-out"></ion-icon>
+                <a href="index.html">Log Out</a>
+              </li>
+              <li>
+                <ion-icon name="key"></ion-icon>
+                <a href="password.html">Change Password</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main">
+      <div class="sidebar">
+        <ul class="sidebar--items">
+          <li>
+            <a href="home.html">
+              <ion-icon style="font-size: 2rem" name="apps"></ion-icon>
+              <span class="sidebar--item">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="inventory.html">
+              <ion-icon style="font-size: 2rem" name="laptop"></ion-icon>
+              <span class="sidebar--item">Inventory and Property </span>
+            </a>
+          </li>
+          <li>
+            <a href="taskk.html">
+              <ion-icon
+                style="font-size: 2rem"
+                name="checkbox-outline"
+              ></ion-icon>
+              <span class="sidebar--item">Staff Task and tour</span>
+            </a>
+          </li>
+          <li>
+            <a href="leaveapplication.html">
+              <ion-icon style="font-size: 2rem" name="mail-open"></ion-icon>
+              <span class="sidebar--item">Leave application form</span>
+            </a>
+          </li>
+          <li>
+            <a href="promotion.html">
+              <ion-icon style="font-size: 2rem" name="school"></ion-icon>
+              <span class="sidebar--item"> Promotion and Resignation</span>
+            </a>
+          </li>
+          <li>
+            <a href="hrh.html">
+              <ion-icon
+                style="font-size: 2rem"
+                name="help-circle-outline"
+              ></ion-icon>
+              <span class="sidebar--item">Human Resource and Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="a.html">
+              <ion-icon style="font-size: 2rem" name="calendar"></ion-icon>
+              <span class="sidebar--item"
+                >Notification and Company Calendar</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="rule.html" id="active--link">
+              <ion-icon style="font-size: 2rem" name="clipboard"></ion-icon>
+              <span class="sidebar--item"> Rules and Regulations </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <h1>Rule And Regulations</h1>
+        <pre>
+            The Company Rules and Regulations for the Employees
+            The following rules and regulations shall impose on all employees of the company. Some
+            rules and regulations include:
+            1. Every employee of the Burgatory company must have to follow and obey the
+            act, guidance, policy, rules, and regulations imposed by the company authority and
+            applicable from time to time.
+            2. The company expects formal and acceptable behaviors from the employees of the
+            Burgatory. The prime motive of the Burgatory company is to attract
+            customers through outstanding conduct of the employees.
+            3. Employees are liable to protect the company's belongings what they are using for office
+            purposes. They will be responsible for breaking any type of official equipment.
+            4. Further, our company the Burgatory very aware of maintaining the record,
+            therefore, every employee has to be conscious to protect documents. The office will not
+            accept any argument without proper evidence.
+        </pre>
+      </div>
+    </section>
+  </body>
+  <!-- the toggle -->
+  <script>
+    let menu = document.querySelector(".menu");
+    let sidebar = document.querySelector(".sidebar");
+    let mainContent = document.querySelector(".main--content");
+
+    menu.onclick = function () {
+      sidebar.classList.toggle("active");
+      mainContent.classList.toggle("active");
+    };
+  </script>
+  <script>
+    function menuToggle() {
+      const toggleMenu = document.querySelector(".menuu");
+      toggleMenu.classList.toggle("active");
+    }
+  </script>
+</html>

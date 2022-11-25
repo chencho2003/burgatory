@@ -1,0 +1,23 @@
+.main {
+  display: grid;
+  grid-template-columns: 25% auto;
+}
+.sidebar {
+  grid-column: 1/2;
+}
+.container {
+  grid-column: 2/3;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 25px;
+  margin: 30px;
+  background-color: #ffe1c3;
+}
+h1 {
+  text-align: center;
+}
+pre {
+  font-size: larger;
+  line-height: 35px;
+  margin: 10px;
+}

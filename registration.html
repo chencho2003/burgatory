@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration.css">
+    <title>Student Form</title>
+</head>
+<body>
+    <div class="container1">
+        <h3>Registration Form</h3>
+        <form action="login.html" method="get" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <div class="row">
+                <div class="col-1">
+                    <label for="fName">First Name: </label></br><label style="font-size: 0.8rem;" class="validation-error hide" id="fnameValidationError">Fill up!</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" id="fName" name="stdid" placeholder="First Name"required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label for="lName">Last Name: </label></br><label style="font-size: 0.8rem;"  class="validation-error hide" id="lnameValidationError">Fill up!</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" id="lName" name="stdtname" placeholder="Last Name" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1">
+                    <label for="email">Email ID: </label>
+                </div>
+                <div class="col-2">
+                    <input type="email" id="email" name="stdemail" placeholder="Email Address" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label for="email">Date of Birth: </label>
+                </div>
+                <div class="col-2">
+                    <input type="date" id="dob" name="stdemail" placeholder="Email Address" required>
+                </div>
+            </div>
+            <br>
+            <div class="row form-action-buttons" >
+                <input type="submit" value="Register">
+            </div>
+            <div class="login">Go Back 
+                <a href="login.html">Log In</a>
+            </div>
+        </form>
+        
+    </div>
+
+      <script src="registration.js"></script>
+</body>
+</html>

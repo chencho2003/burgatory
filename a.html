@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="a.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+
+    <section class="header">
+
+      <div class="logo">
+        <i class="ri-menu-line icon icon-0 menu"></i>
+        <h2>BURGATORY</h2>
+      </div>
+
+      <div class="search--notification--profile">
+
+        <div class="search">
+          <input type="text" placeholder="Search.." />
+          <button><i class="ri-search-2-line"></i></button>
+        </div>
+
+        <div class="notification--profile">
+
+          <div class="profile" onclick="menuToggle();">
+            <img src="profile.jpg" alt="">
+          </div>
+
+          <div class="menuu">
+            <h4>Chencho Wangdi
+              <div>
+                Management Team
+              </div>
+            </h4>
+            <ul>
+              <li>
+                <ion-icon name="person"></ion-icon>
+                <a href="profilee.html">My Profile</a>
+              </li>
+              <li>
+                <ion-icon name="log-in"></ion-icon>
+                <a href="login.html">Log In</a>
+              </li>
+              <li>
+                <ion-icon name="log-out"></ion-icon>
+                <a href="index.html">Log Out</a>
+              </li>
+              <li>
+                <ion-icon name="key"></ion-icon>
+                <a href="password.html">Change Password</a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+    <section class="main">
+      <div class="sidebar">
+        <ul class="sidebar--items">
+          <li>
+            <a href="home.html" id="active--link">
+              <ion-icon style="font-size: 2rem;" name="apps"></ion-icon> 
+              <span class="sidebar--item">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="inventory.html">
+              <ion-icon style="font-size: 2rem;" name="laptop"></ion-icon>
+              <span class="sidebar--item">Inventory and Property
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="taskk.html">
+              <ion-icon style="font-size: 2rem;" name="checkbox-outline"></ion-icon>
+              <span class="sidebar--item">Staff Task and tour</span>
+            </a>
+          </li>
+          <li>
+            <a href="leaveapplication.html">
+              <ion-icon style="font-size: 2rem;" name="mail-open"></ion-icon>
+              <span class="sidebar--item">Leave application form</span>
+            </a>
+          </li>
+          <li>
+            <a href="promotion.html">
+              <ion-icon style="font-size: 2rem;" name="school"></ion-icon>
+              <span class="sidebar--item"> Promotion and Resignation</span>
+            </a>
+          </li>
+          <li>
+            <a href="hrh.html">
+              <ion-icon style="font-size: 2rem;" name="help-circle-outline"></ion-icon>
+              <span class="sidebar--item">Human Resource and Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="a.html">
+              <ion-icon style="font-size: 2rem;" name="calendar"></ion-icon>
+              <span class="sidebar--item">Notification and Company Calendar</span>
+            </a>
+          </li>
+          <li>
+            <a href="rule.html">
+
+              <ion-icon style="font-size: 2rem;"  name="clipboard"></ion-icon>
+              <span class="sidebar--item"> Rules and Regulations
+              </span>
+            </a>
+          </li>
+        </ul>
+    </div>
+    <div class="main--content">
+      <div class="container-fluid pt-4 px-4">
+        <div class="bg-light text-center rounded p-4">
+          <div
+            class="d-flex align-items-center justify-content-between text-dark mb-4"
+          >
+            <h6 class="mb-" style="font-size: 2rem; font-family: cursive; margin: 20px 0;">Company Calender</h6>
+          </div>
+          <div class="table-responsive">
+            <!-- (A) PERIOD SELECTOR -->
+            <div class="body">
+              <div id="calPeriod">
+                <select id="calMonth"></select>
+                <input type="number" id="calYear" />
+              </div>
+
+              <!-- (B) CALENDAR -->
+              <div id="calWrap"></div>
+
+              <!-- (C) EVENT FORM -->
+              <dialog id="calForm">
+                <form method="dialog">
+                  <h2>CALENDAR EVENT</h2>
+                  <label>Date</label>
+                  <input type="text" id="evtDate" readonly />
+                  <label>Details</label>
+                  <textarea id="evtTxt" required></textarea>
+
+                  <input id="evtClose" type="button" value="Close" />
+                  <input id="evtDel" type="button" value="Delete" />
+                  <input id="evtSave" type="submit" value="Save" />
+                </form>
+              </dialog>
+            </div>
+          </div>
+
+    </div>
+    </section>
+    <script src="calendar.js"></script>
+    <!-- the toggle -->
+    <script>
+      let menu = document.querySelector(".menu");
+      let sidebar = document.querySelector(".sidebar");
+      let mainContent = document.querySelector(".main--content");
+
+      menu.onclick = function () {
+        sidebar.classList.toggle("active");
+        mainContent.classList.toggle("active");
+      };
+    </script>
+    <script>
+      function menuToggle(){
+        const toggleMenu = document.querySelector('.menuu');
+        toggleMenu.classList.toggle('active')
+      }
+    </script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <title>Druk Tshong</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+          <nav>
+            <ul id="MenuItems">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="">Products</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul>
+          </nav>
+          <img src="burgerhd.png" class="menubtn" onClick="menutoggle()" />
+        </div>
+        <div class="paragraph">
+          <div class="content">
+            <h1>
+              BUY<span style="color: #ffc8a1"> ONE </span>GET<span
+                style="color: #ffc8a1"
+              >
+                TWO
+              </span>
+              FREE!
+            </h1>
+            <p>TOP PRODUCTS AT LOWEST PRICE</p>
+            <a href="" class="btn">Explore Now</a>
+          </div>
+          <div class="content">
+            <img src="burgerhd.png" class="hover-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----------------------------------footer------------------------------------->
+    <div class="footer">
+      <div class="container">
+        <div class="paragraph">
+          <div class="footer-content">
+            <img src="rename.png" style="width: 200px" />
+          </div>
+          <div class="footer-col-1">
+            <h3>DELICIOUS & TASTY</h3>
+            <p>TRY IT NOW!</p>
+          </div>
+        </div>
+        <p class="copyright">Copyright 2022 - BUGARTORY</p>
+      </div>
+    </div>
+
+    <!-----------------------------------js for toggle menu----------------------------------------------->
+    <script>
+      var menuItems = document.getElementById("MenuItems");
+
+      MenuItems.style.maxHeight = "0px";
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>

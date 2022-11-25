@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background-color: #aea8a8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("background.jpg") center/cover no-repeat;
+}
+.container {
+  background-color: rgba(255, 255, 255, 0.663);
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 380px;
+}
+.form {
+  padding: 10px 20px;
+}
+
+.form h1 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.form-field {
+  margin-bottom: 5px;
+}
+.form-field label {
+  display: block;
+  color: rgb(0, 0, 0);
+  margin-bottom: 5px;
+}
+.form-field input {
+  border: solid 2px #f0f0f0;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+}
+.form-field.error input {
+  border-color: red;
+}
+.form-field.success input {
+  border-color: #4bb543;
+}
+.form-field small {
+  color: #b00020;
+}
+
+/* button */
+.btn {
+  border: none;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  width: 140px;
+  padding: 3%;
+  margin-top: 15px;
+  background-color: rgb(235, 183, 87);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.btn:hover {
+  color: rgb(63, 63, 63);
+  cursor: pointer;
+}
+.sosobtn {
+  border: none;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  width: 140px;
+  padding: 2.6%;
+  background-color: rgb(235, 183, 87);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-top: -40px;
+  float: right;
+  margin-right: 25px;
+}
+.sosobtn:hover {
+  color: rgb(63, 63, 63);
+  cursor: pointer;
+}

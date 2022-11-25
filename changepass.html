@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Form Validation</title>
+    <link rel="stylesheet" href="changepass.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="signup" class="form" action="login.html" method="GET">
+        <h1>Change Password</h1>
+
+        <div class="form-field">
+          <label for="email">Old Password:</label>
+          <input
+            type="text"
+            name="oldPassword"
+            id="oldPassword"
+            autocomplete="off"
+          />
+          <small></small>
+        </div>
+
+        <div class="form-field">
+          <label for="password">New Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            autocomplete="off"
+          />
+          <small></small>
+        </div>
+
+        <div class="form-field">
+          <label for="confirm-password">Confirm New Password:</label>
+          <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+            autocomplete="off"
+          />
+          <small></small>
+        </div>
+
+        <div class="form-field1">
+          <button class="btn" type="submit">Change Password</button>
+        </div>
+      </form>
+      <a href="login.html"><button class="sosobtn">Cancel</button> </a>
+    </div>
+    <script src="changepass.js"></script>
+  </body>
+</html>

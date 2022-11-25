@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Form Validation</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="home.html" id="login" class="form">
+        <h1 style="font-family: cursive;">Login</h1>
+        <div class="form-field">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            name="user-name"
+            id="username"
+            autocomplete="off" placeholder="Enter your email adress">
+          <small></small>
+        </div>
+
+        <div class="form-field">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            autocomplete="off" placeholder="Enter your password">
+          <small></small>
+        </div>
+        <div class="form-field">
+          <input class="btn" type="submit" value="login" />
+        </div>
+        <div class="signup_link">
+          <a href="changepass.html">Forgot Password?</a>
+        </div>
+        <div class="signup_link">
+            Not a member? <a href="registration.html">Signup</a>
+          </div>
+      </form>
+    </div>  
+    <script src="login.js"></script>
+  </body>
+</html>

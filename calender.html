@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="calender.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <section class="header">
+        <!-- <img class="img1" src="aaa.jpeg" alt=""> -->
+  
+        <div class="logo">
+          <i class="ri-menu-line icon icon-0 menu"></i>
+          <!-- <img class="img1" src="aaa.jpeg" alt=""> -->
+          <h2>BURGATORY</h2>
+        </div>
+  
+        <div class="search--notification--profile">
+  
+          <div class="search">
+            <input type="text" placeholder="Search.." />
+            <button><i class="ri-search-2-line"></i></button>
+          </div>
+  
+          <div class="notification--profile">
+  
+            <div class="profile" onclick="menuToggle();">
+              <img src="profile.jpg" alt="">
+            </div>
+  
+            <div class="menuu">
+              <h4>Anushia Subba
+                <div>
+                  oparation Team
+                </div>
+              </h4>
+              <ul>
+                <li>
+                  <ion-icon name="person"></ion-icon>
+                  <a href="profilee.html">My Profile</a>
+                </li>
+                <li>
+                  <ion-icon name="log-in"></ion-icon>
+                  <a href="">Log In</a>
+                </li>
+                <li>
+                  <ion-icon name="log-out"></ion-icon>
+                  <a href="index.html">Log Out</a>
+                </li>
+                <li>
+                  <ion-icon name="key"></ion-icon>
+                  <a href="">Change Password</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main">
+    <div class="grid-container">
+        <div class="sidebar">
+          <ul class="sidebar--items">
+            <li>
+              <a href="home.html" >
+                <ion-icon style="font-size: 2rem;" name="apps"></ion-icon> 
+                <span class="sidebar--item">Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://ionic.io/ionicons/v4">
+                <ion-icon style="font-size: 2rem;" name="checkmark-circle-outline"></ion-icon>
+                <span class="sidebar--item" style="white-space: nowrap"
+                  >Publication</span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="inventory.html">
+                <ion-icon style="font-size: 2rem;" name="laptop"></ion-icon>
+                <span class= "active" class="sidebar--item">Inventory and Property
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <ion-icon style="font-size: 2rem;" name="checkbox-outline"></ion-icon>
+                <span class="sidebar--item">Staff Task and tour</span>
+              </a>
+            </li>
+            <li>
+              <a href="leaveapplication.html">
+                <ion-icon style="font-size: 2rem;" name="mail-open"></ion-icon>
+                <span class="sidebar--item">Leave application form</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <ion-icon style="font-size: 2rem;" name="school"></ion-icon>
+                <span class="sidebar--item"> Promotion and Resignation</span>
+              </a>
+            </li>
+            <li>
+              <a href="hrh.html">
+                <ion-icon style="font-size: 2rem;" name="help-circle-outline"></ion-icon>
+                <span class="sidebar--item">Human Resource and Help</span>
+              </a>
+            </li>
+            <li>
+              <a href="calender.html" id="active--link">
+                <ion-icon style="font-size: 2rem;" name="calendar"></ion-icon>
+                <span class="sidebar--item">Notification and Company Calendar</span>
+              </a>
+            </li>
+            <li>
+              <a href="rule.html">
+  
+                <ion-icon style="font-size: 2rem;"  name="clipboard"></ion-icon>
+                <span class="sidebar--item"> Rules and Regulations
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+    <div class="container">
+      <div class="container-fluid pt-4 px-4">
+        <div class="bg-light text-center rounded p-4">
+          <div
+            class="d-flex align-items-center justify-content-between text-dark mb-4"
+          >
+            <h6 class="mb-0">Company Calender</h6>
+          </div>
+          <div class="table-responsive">
+            <!-- (A) PERIOD SELECTOR -->
+            <div class="body">
+              <div id="calPeriod">
+                <select id="calMonth"></select>
+                <input type="number" id="calYear" />
+              </div>
+
+              <!-- (B) CALENDAR -->
+              <div id="calWrap"></div>
+
+              <!-- (C) EVENT FORM -->
+              <dialog id="calForm">
+                <form method="dialog">
+                  <h2>CALENDAR EVENT</h2>
+                  <label>Date</label>
+                  <input type="text" id="evtDate" readonly />
+                  <label>Details</label>
+                  <textarea id="evtTxt" required></textarea>
+
+                  <input id="evtClose" type="button" value="Close" />
+                  <input id="evtDel" type="button" value="Delete" />
+                  <input id="evtSave" type="submit" value="Save" />
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+
+    </div>
+</section>
+  </body>
+  <script>
+    let menu = document.querySelector(".menu");
+    let sidebar = document.querySelector(".sidebar");
+    let mainContent = document.querySelector(".main--content");
+
+    menu.onclick = function () {
+      sidebar.classList.toggle("active");
+      mainContent.classList.toggle("active");
+    };
+  </script>
+  <script>
+    function menuToggle() {
+      const toggleMenu = document.querySelector(".menuu");
+      toggleMenu.classList.toggle("active");
+    }
+  </script>
+</html>

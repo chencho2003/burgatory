@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+/* .container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+.calendar {
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.162);
+  height: 501px;
+  perspective: 1000;
+  transition: 0.9s;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.current-date {
+  border-bottom: 1px solid rgba(73, 114, 133, 0.6);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+}
+
+.current-date h1 {
+  color: #1a1a1a;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+.week-days {
+  color: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  padding: 30px 40px;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.weeks {
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+}
+
+.weeks div {
+  display: flex;
+  font-size: 1.2em;
+  font-weight: 300;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.last-month {
+  opacity: 0.3;
+}
+
+.weeks span {
+  padding: 10px;
+}
+
+.weeks span.active {
+  background: #ffe1c3;
+  border-radius: 50%;
+} */
+
+/* Back - Event form */
+
+/* .back input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(73, 114, 133, 0.6);
+  color: #000000;
+  font-size: 1.4em;
+  font-weight: 300;
+  padding: 30px 40px;
+  width: 100%;
+}
+
+.actions {
+  top: 15cm;
+  bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+}
+
+.actions button {
+  background: none;
+  border: 0;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin: 0;
+  padding: 30px 0;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.actions button:hover {
+  background: #ffe1c3;
+  cursor: pointer;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% auto;
+}
+.sidebar {
+  grid-column: 1/2;
+}
+.container {
+  grid-column: 2/3;
+}
+.menuu.active {
+  z-index: 3;
+}
+
+.main {
+  background-color: #f6f6f6;
+}
+
+.calendar {
+  background-color: #ffe1c3;
+} */
+
+
+
+
+
+
+:root {
+  --bg-color-a: #3b39af; /* page header + form label */
+  --bg-color-b: #404040; /* calendar header */
+  --bg-color-c: #d73a3a; /* buttons */
+}
+.hide {
+  display: none !important;
+}
+
+/* (B) PERIOD SELECTOR */
+#calPeriod {
+  padding: 15px;
+  background: var(--bg-color-a);
+}
+#calPeriod input,
+#calPeriod select {
+  font-size: 24px;
+  border: 0;
+  outline: none;
+  color: #fff;
+  background: 0;
+  cursor: pointer;
+}
+#calPeriod option {
+  color: #000;
+}
+#calYear {
+  width: 100px;
+  margin-left: 10px;
+}
+
+/* (C) CALENDAR */
+/* (C1) SHARED */
+.calHead,
+.calRow {
+  display: flex;
+}
+.calCell {
+  width: 14.2857%;
+}
+
+/* (C2) HEADER - DAY NAMES */
+.calHead .calCell {
+  color: #fff;
+  background: var(--bg-color-b);
+  font-weight: 700;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* (C3) BODY - INDIVIDUAL DAYS */
+.calBlank {
+  background: #eee;
+}
+.calToday {
+  background: #feffd3;
+}
+.calToday .cellDate {
+  color: #ff9b9b;
+}
+.calBody .calCell {
+  border: 1px solid #f5f5f5;
+  min-height: 80px;
+}
+.cellDate,
+.evt {
+  padding: 5px;
+}
+.cellDate {
+  font-size: 14px;
+  font-weight: 700;
+  color: #b5b5b5;
+}
+.evt {
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* (D) EVENT FORM */
+#calForm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#calForm:is([open]) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#calForm form {
+  width: 450px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+}
+#calForm h2 {
+  margin: 0 0 15px 0;
+}
+#calForm label,
+#calForm input[type="text"],
+#calForm textarea {
+  width: 100%;
+}
+#calForm label {
+  color: #a1a1a1;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+#calForm input[type="text"],
+#calForm textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  background: #f5f5f5;
+}
+#calForm textarea {
+  height: 50px;
+}
+#calForm input[type="button"],
+#calForm input[type="submit"] {
+  border: 0;
+  padding: 10px;
+  margin: 10px 2px 0 0;
+  color: #fff;
+  background: var(--bg-color-c);
+  cursor: pointer;
+}
